@@ -6,11 +6,16 @@
         <script src="lib/jquery-1.9.1.min.js"></script>
         <script src="lib/three.min.js"></script>
         <script src="lib/stats.min.js"></script>
+        <script src="lib/TrackballControls.js"></script>
         <script src="src/game.js"></script>
         <script>
             $(function () {
 
+                // init the game object
                 var game = new Game;
+
+                // begin animating
+                game.animate();
 
             });
         </script>
