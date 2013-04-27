@@ -1,0 +1,1 @@
+The typical hello world application, for three.js. This sets up a scene and points a camera at a small cube.
