@@ -31,13 +31,21 @@ function Game () {
     document.body.appendChild(this.renderer.domElement);
     document.body.appendChild(this.stats.domElement);
 
-    var cubeGeometry = new THREE.CubeGeometry( 50, 50, 50 );
-    var cubeMaterial = new THREE.MeshBasicMaterial( { color: 0x000088 } );
-    var cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
-    cube.position.set(0,26,0);
+    // define the cube
+    var cubeMaterial = new THREE.MeshBasicMaterial({ color: 0x00, wireframe: true }),
+        cubeGeometry = new THREE.CubeGeometry(10, 10, 10),
+        cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+
+    // specify the cubes starting position
+    cube.position.set(0, 0, 0);
+
+    // add the cube to the scene
     this.scene.add(cube);
 
+    // place this camera back a little bit from the cube
     this.camera.position.set(0, 150, 400);
+
+    // point the camera back towards the cube
     this.camera.lookAt(this.scene.position);
 
 };
